@@ -1,0 +1,521 @@
+﻿
+@{
+    ViewBag.Title = "Rezervasyon Ekle";
+}
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Yeni Rezervasyon Ekle
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <form role="form">
+                            <div class="form-group">
+                                <label>Müşteri Adı</label>
+                                <div class="form-group input-group">
+                                    <input type="text" class="form-control">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default" type="button">
+                                            <i class="fa fa-bars"></i>
+                                        </button>
+                                    </span>
+                                </div>
+                                <!--<p class="help-block">Example block-level help text here.</p>-->
+                            </div>
+                            <div class="form-group">
+                                <label>Araç Seç</label>
+                                <div class="form-group input-group">
+                                    <input type="text" class="form-control">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default" type="button">
+                                            <i class="fa fa-search"></i>
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-lg-6">
+                                    <label>Alış Tarihi:</label>
+                                    <input class="form-control" type="date" />
+                                </div>
+                                <div class="form-group col-lg-6">
+                                    <label>Teslim Tarihi:</label>
+                                    <input class="form-control" type="date" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-lg-6">
+                                    <label>Alış Saati:</label>
+                                    <select class="form-control">
+                                        <option>00:00</option>
+                                        <option>00:30</option>
+                                        <option>01:00</option>
+                                        <option>01:30</option>
+                                        <option>02:00</option>
+                                        <option>02:30</option>
+                                        <option>03:00</option>
+                                        <option>03:30</option>
+                                        <option>04:00</option>
+                                        <option>04:30</option>
+                                        <option>05:00</option>
+                                        <option>05:30</option>
+                                        <option>06:00</option>
+                                        <option>06:30</option>
+                                        <option>07:00</option>
+                                        <option>07:30</option>
+                                        <option>08:00</option>
+                                        <option>08:30</option>
+                                        <option>09:00</option>
+                                        <option>09:30</option>
+                                        <option>10:00</option>
+                                        <option>10:30</option>
+                                        <option>11:00</option>
+                                        <option>11:30</option>
+                                        <option>12:00</option>
+                                        <option>12:30</option>
+                                        <option>13:00</option>
+                                        <option>13:30</option>
+                                        <option>14:00</option>
+                                        <option>14:30</option>
+                                        <option>15:00</option>
+                                        <option>15:30</option>
+                                        <option>16:00</option>
+                                        <option>16:30</option>
+                                        <option>17:00</option>
+                                        <option>17:30</option>
+                                        <option>18:00</option>
+                                        <option>18:30</option>
+                                        <option>19:00</option>
+                                        <option>19:30</option>
+                                        <option>20:00</option>
+                                        <option>20:30</option>
+                                        <option>21:00</option>
+                                        <option>21:30</option>
+                                        <option>22:00</option>
+                                        <option>22:30</option>
+                                        <option>23:00</option>
+                                        <option>23:30</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-lg-6">
+                                    <label>Teslim Saati:</label>
+                                    <select class="form-control">
+                                        <option>00:00</option>
+                                        <option>00:30</option>
+                                        <option>01:00</option>
+                                        <option>01:30</option>
+                                        <option>02:00</option>
+                                        <option>02:30</option>
+                                        <option>03:00</option>
+                                        <option>03:30</option>
+                                        <option>04:00</option>
+                                        <option>04:30</option>
+                                        <option>05:00</option>
+                                        <option>05:30</option>
+                                        <option>06:00</option>
+                                        <option>06:30</option>
+                                        <option>07:00</option>
+                                        <option>07:30</option>
+                                        <option>08:00</option>
+                                        <option>08:30</option>
+                                        <option>09:00</option>
+                                        <option>09:30</option>
+                                        <option>10:00</option>
+                                        <option>10:30</option>
+                                        <option>11:00</option>
+                                        <option>11:30</option>
+                                        <option>12:00</option>
+                                        <option>12:30</option>
+                                        <option>13:00</option>
+                                        <option>13:30</option>
+                                        <option>14:00</option>
+                                        <option>14:30</option>
+                                        <option>15:00</option>
+                                        <option>15:30</option>
+                                        <option>16:00</option>
+                                        <option>16:30</option>
+                                        <option>17:00</option>
+                                        <option>17:30</option>
+                                        <option>18:00</option>
+                                        <option>18:30</option>
+                                        <option>19:00</option>
+                                        <option>19:30</option>
+                                        <option>20:00</option>
+                                        <option>20:30</option>
+                                        <option>21:00</option>
+                                        <option>21:30</option>
+                                        <option>22:00</option>
+                                        <option>22:30</option>
+                                        <option>23:00</option>
+                                        <option>23:30</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group input-group">
+                                        <span class="input-group-addon">₺</span>
+                                        <input type="text" class="form-control">
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-default" type="button">
+                                                <i class="fa fa-exchange"></i>
+                                            </button>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group input-group">
+                                        <span class="input-group-addon">€</span>
+                                        <input type="text" class="form-control">
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-default" type="button">
+                                                <i class="fa fa-exchange"></i>
+                                            </button>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group input-group">
+                                        <span class="input-group-addon">$</span>
+                                        <input type="text" class="form-control">
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-default" type="button">
+                                                <i class="fa fa-exchange"></i>
+                                            </button>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label>Sürücü Ehliyet</label>
+                                        <input type="file">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label>Sürücü Kimlik</label>
+                                        <input type="file">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Açıklama</label>
+                                <textarea class="form-control" rows="3"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" value="">Kasko
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" value="">GPS
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" value="">Bebek Koltuğu
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" value="">Ek Sürücü
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12 center">
+                                    <button type="submit" class="btn btn-success">Rezervasyon oluştur</button>
+                                    <button type="reset" class="btn btn-danger">İptal Et</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- /.col-lg-6 (nested) -->
+                    <div class="col-lg-6">
+                        <h1>Fiat Egea - Oto/Dizel - Orta Dizel Sedan</h1>
+                        <form role="form">
+                            <fieldset disabled>
+                                <div class="form-group">
+                                    <label for="disabledSelect">Araç Plaka</label>
+                                    <input class="form-control" id="disabledInput" type="text" placeholder="34 SE 7022" disabled>
+                                </div>
+                            </fieldset>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <img style="width:100%; height:60%;" src="https://i.ytimg.com/vi/vDDF7TrURKA/maxresdefault.jpg" class="form-control" />
+                                </div>
+                            </div><br />
+                            <div class="form-group">
+                                <label>Ekstralar</label>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" value="" disabled>Kasko
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" value="" disabled>GPS
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" value="" disabled>Bebek Koltuğu
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" value="" disabled>Ek Sürücü
+                                    </label>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- /.col-lg-6 (nested) -->
+                </div>
+                <!-- /.row (nested) -->
+            </div>
+            <!-- /.panel-body -->
+        </div>
+        <!-- /.panel -->
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<!-- /.row -->
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                DataTables Advanced Tables
+            </div>
+            <!-- /.panel-heading -->
+            <div class="panel-body">
+                <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Müşteri Adı</th>
+                            <th>Satış Elemanı Adı</th>
+                            <th>Araç Plaka</th>
+                            <th>Araç ID</th>
+                            <th>Baş. Tarihi</th>
+                            <th>Baş. Saati</th>
+                            <th>Bitiş Tarihi</th>
+                            <th>Bitiş Saati</th>
+                            <th>Notlar</th>
+                            <th>İşlem</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="odd gradeX">
+                            <td>1</td>
+                            <td>Hakan Kakız</td>
+                            <td>Manuş Baba</td>
+                            <td>34 SE 7022</td>
+                            <td class="center">3433</td>
+                            <td>12.04.2018</td>
+                            <td class="center">14.44</td>
+                            <td>16.04.2018</td>
+                            <td class="center">14.44</td>
+                            <td>500 ₺ Depozito Alındı</td>
+                            <td>
+                                <a href="#" class="btn-circle btn btn-warning"> <i class="fa fa-edit"></i></a>
+                            </td>
+                        </tr>
+                        <tr class="even gradeC">
+                            <td>1</td>
+                            <td>Hakan Kakız</td>
+                            <td>Manuş Baba</td>
+                            <td>34 SE 7022</td>
+                            <td class="center">3433</td>
+                            <td>12.04.2018</td>
+                            <td class="center">14.44</td>
+                            <td>16.04.2018</td>
+                            <td class="center">14.44</td>
+                            <td>500 ₺ Depozito Alındı</td>
+                            <td>
+                                <a href="#" class="btn-circle btn btn-warning"> <i class="fa fa-edit"></i></a>
+                            </td>
+                        </tr>
+                        <tr class="odd gradeA">
+                            <td>1</td>
+                            <td>Hakan Kakız</td>
+                            <td>Manuş Baba</td>
+                            <td>34 SE 7022</td>
+                            <td class="center">3433</td>
+                            <td>12.04.2018</td>
+                            <td class="center">14.44</td>
+                            <td>16.04.2018</td>
+                            <td class="center">14.44</td>
+                            <td>500 ₺ Depozito Alındı</td>
+                            <td>
+                                <a href="#" class="btn-circle btn btn-warning"> <i class="fa fa-edit"></i></a>
+                            </td>
+                        </tr>
+                        <tr class="even gradeA">
+                            <td>1</td>
+                            <td>Hakan Kakız</td>
+                            <td>Manuş Baba</td>
+                            <td>34 SE 7022</td>
+                            <td class="center">3433</td>
+                            <td>12.04.2018</td>
+                            <td class="center">14.44</td>
+                            <td>16.04.2018</td>
+                            <td class="center">14.44</td>
+                            <td>500 ₺ Depozito Alındı</td>
+                            <td>
+                                <a href="#" class="btn-circle btn btn-warning"> <i class="fa fa-edit"></i></a>
+                            </td>
+                        </tr>
+                        <tr class="odd gradeA">
+                            <td>1</td>
+                            <td>Hakan Kakız</td>
+                            <td>Manuş Baba</td>
+                            <td>34 SE 7022</td>
+                            <td class="center">3433</td>
+                            <td>12.04.2018</td>
+                            <td class="center">14.44</td>
+                            <td>16.04.2018</td>
+                            <td class="center">14.44</td>
+                            <td>500 ₺ Depozito Alındı</td>
+                            <td>
+                                <a href="#" class="btn-circle btn btn-warning"> <i class="fa fa-edit"></i></a>
+                            </td>
+                        </tr>
+                        <tr class="even gradeA">
+                            <td>1</td>
+                            <td>Hakan Kakız</td>
+                            <td>Manuş Baba</td>
+                            <td>34 SE 7022</td>
+                            <td class="center">3433</td>
+                            <td>12.04.2018</td>
+                            <td class="center">14.44</td>
+                            <td>16.04.2018</td>
+                            <td class="center">14.44</td>
+                            <td>500 ₺ Depozito Alındı</td>
+                            <td>
+                                <a href="#" class="btn-circle btn btn-warning"> <i class="fa fa-edit"></i></a>
+                            </td>
+                        </tr>
+                        <tr class="gradeA">
+                            <td>1</td>
+                            <td>Hakan Kakız</td>
+                            <td>Manuş Baba</td>
+                            <td>34 SE 7022</td>
+                            <td class="center">3433</td>
+                            <td>12.04.2018</td>
+                            <td class="center">14.44</td>
+                            <td>16.04.2018</td>
+                            <td class="center">14.44</td>
+                            <td>500 ₺ Depozito Alındı</td>
+                            <td>
+                                <a href="#" class="btn-circle btn btn-warning"> <i class="fa fa-edit"></i></a>
+                            </td>
+                        </tr>
+                        <tr class="gradeA">
+                            <td>1</td>
+                            <td>Hakan Kakız</td>
+                            <td>Manuş Baba</td>
+                            <td>34 SE 7022</td>
+                            <td class="center">3433</td>
+                            <td>12.04.2018</td>
+                            <td class="center">14.44</td>
+                            <td>16.04.2018</td>
+                            <td class="center">14.44</td>
+                            <td>500 ₺ Depozito Alındı</td>
+                            <td>
+                                <a href="#" class="btn-circle btn btn-warning"> <i class="fa fa-edit"></i></a>
+                            </td>
+                        </tr>
+                        <tr class="gradeA">
+                            <td>1</td>
+                            <td>Hakan Kakız</td>
+                            <td>Manuş Baba</td>
+                            <td>34 SE 7022</td>
+                            <td class="center">3433</td>
+                            <td>12.04.2018</td>
+                            <td class="center">14.44</td>
+                            <td>16.04.2018</td>
+                            <td class="center">14.44</td>
+                            <td>500 ₺ Depozito Alındı</td>
+                            <td>
+                                <a href="#" class="btn-circle btn btn-warning"> <i class="fa fa-edit"></i></a>
+                            </td>
+                        </tr>
+                        <tr class="gradeA">
+                            <td>1</td>
+                            <td>Hakan Kakız</td>
+                            <td>Manuş Baba</td>
+                            <td>34 SE 7022</td>
+                            <td class="center">3433</td>
+                            <td>12.04.2018</td>
+                            <td class="center">14.44</td>
+                            <td>16.04.2018</td>
+                            <td class="center">14.44</td>
+                            <td>500 ₺ Depozito Alındı</td>
+                            <td>
+                                <a href="#" class="btn-circle btn btn-warning"> <i class="fa fa-edit"></i></a>
+                            </td>
+                        </tr>
+                        <tr class="gradeA">
+                            <td>1</td>
+                            <td>an Kakız</td>
+                            <td>Auş Baba</td>
+                            <td>34 SE 7022</td>
+                            <td class="center">3433</td>
+                            <td>12.04.2018</td>
+                            <td class="center">14.44</td>
+                            <td>16.04.2018</td>
+                            <td class="center">14.44</td>
+                            <td>500 ₺ Depozito Alındı</td>
+                            <td>
+                                <a href="#" class="btn-circle btn btn-warning"> <i class="fa fa-edit"></i></a>
+                            </td>
+                        </tr>
+                        <tr class="gradeA">
+                            <td>1</td>
+                            <td>Hakan Kakız</td>
+                            <td>Manuş Baba</td>
+                            <td>34 SE 7022</td>
+                            <td class="center">3433</td>
+                            <td>12.04.2018</td>
+                            <td class="center">14.44</td>
+                            <td>16.04.2018</td>
+                            <td class="center">14.44</td>
+                            <td>500 ₺ Depozito Alındı</td>
+                            <td>
+                                <a href="#" class="btn-circle btn btn-warning"> <i class="fa fa-edit"></i></a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- /.panel-body -->
+        </div>
+        <!-- /.panel -->
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+
+
+
+<!-- DataTables JavaScript -->
+<script src="../HTML/vendor/datatables/js/jquery.dataTables.min.js"></script>
+<script src="../HTML/vendor/datatables-plugins/dataTables.bootstrap.min.js"></script>
+<script src="../HTML/vendor/datatables-responsive/dataTables.responsive.js"></script>
+
+<!-- Page-Level Demo Scripts - Tables - Use for reference -->
+<script>
+    $(document).ready(function () {
+        $('#dataTables-example').DataTable({
+            responsive: true
+        });
+    });
+</script>
