@@ -1,5 +1,6 @@
 ﻿using Bitirme.DBModel.Context;
 using Bitirme.DBModel.Entity;
+using Bitirme.Models.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +11,7 @@ namespace Bitirme.Controllers
 {
     public class UserController : Controller
     {
+        ProjectContext contexts = new ProjectContext();
         // GET: User
         public ActionResult AddNewUser()
         {
@@ -43,7 +45,9 @@ namespace Bitirme.Controllers
             }
             else
             {
-                return View();
+                UserModel model = new UserModel();
+                model.Users = contexts.Users.ToList();
+                return View(model);
             }
         }
 
@@ -67,6 +71,7 @@ namespace Bitirme.Controllers
             User newUser = new User();// make object of table
             newUser.UserName = name;
             newUser.UserEmail = email;
+            newUser.UserNickName = username;
             newUser.UserPassword = password;
             newUser.UserNumber = phone;
             //add if any field you want insert

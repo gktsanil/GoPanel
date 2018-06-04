@@ -22,6 +22,7 @@ namespace Bitirme.DBModel.Entity
         public string CarFuel { get; set; }
         public int CarStatus { get; set; }
         public int CarlastKM { get; set; }
+        public string CarDescription { get; set; }
 
         public virtual Service Service { get; set; }
     }

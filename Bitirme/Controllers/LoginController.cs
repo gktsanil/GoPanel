@@ -1,5 +1,6 @@
 ﻿using Bitirme.DBModel.Context;
 using Bitirme.DBModel.Entity;
+using Bitirme.Models.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +11,7 @@ namespace Bitirme.Controllers
 {
     public class LoginController : Controller
     {
+        ProjectContext context = new ProjectContext();
         // GET: Login
         public ActionResult Login()
         {
@@ -19,13 +21,23 @@ namespace Bitirme.Controllers
         [HttpPost]
         public ActionResult Login(String username, String password)
         {
+            UserModel model = new UserModel();
+            model.Users = context.Users.ToList();
 
-                if (username == "anilgoktas" && password == "123456")
+            foreach (var user in model.Users)
+            {
+                if (username == user.UserNickName)
                 {
-                    Session["username"] = username;
-                    Session["login"] = "true";
+                    if (password == user.UserPassword)
+                    {
+                        Session["username"] = username;
+                        Session["login"] = "true";
+                        
+                    }
                 }
+            }
             return RedirectToAction("Index", "Home");
+
         }
 
         [HttpGet]

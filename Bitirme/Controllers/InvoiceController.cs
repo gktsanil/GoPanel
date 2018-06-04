@@ -36,7 +36,10 @@ namespace Bitirme.Controllers
             }
             else
             {
-                return View();
+                InvoiceModel model = new InvoiceModel();
+                model.Customers = context.Customers.ToList();
+                model.Invoices = context.Invoices.ToList();
+                return View(model);
             }
         }
 
@@ -48,7 +51,10 @@ namespace Bitirme.Controllers
             }
             else
             {
-                return View();
+                InvoiceModel model = new InvoiceModel();
+                model.Customers = context.Customers.ToList();
+                model.Invoices = context.Invoices.ToList();
+                return View(model);
             }
         }
 
@@ -60,7 +66,10 @@ namespace Bitirme.Controllers
             }
             else
             {
-                return View();
+                InvoiceModel model = new InvoiceModel();
+                model.Customers = context.Customers.ToList();
+                model.Invoices = context.Invoices.ToList();
+                return View(model);
             }
         }
     }

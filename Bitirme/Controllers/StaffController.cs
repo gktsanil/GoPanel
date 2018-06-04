@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Bitirme.DBModel.Context;
+using Bitirme.Models.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,6 +10,7 @@ namespace Bitirme.Controllers
 {
     public class StaffController : Controller
     {
+        ProjectContext context = new ProjectContext();
         // GET: Staff
         public ActionResult StaffList()
         {
@@ -17,7 +20,10 @@ namespace Bitirme.Controllers
             }
             else
             {
-                return View();
+                StaffModel model = new StaffModel();
+                model.Staffs = context.Staffs.ToList();
+
+                return View(model);
             }
         }
 
@@ -29,7 +35,11 @@ namespace Bitirme.Controllers
             }
             else
             {
-                return View();
+                StaffModel model = new StaffModel();
+                model.Staffs = context.Staffs.ToList();
+                model.Payments = context.Payments.ToList();
+
+                return View(model);
             }
         }
 

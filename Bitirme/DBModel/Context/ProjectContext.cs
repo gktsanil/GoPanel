@@ -17,5 +17,7 @@ namespace Bitirme.DBModel.Context
         public DbSet<Service> Services { get; set; }
         public DbSet<CarServiceCompany> CarServiceCompanies { get; set; }
         public DbSet<Message> Messages { get; set; }
+        public DbSet<Staff> Staffs { get; set; }
+        public DbSet<Payment> Payments { get; set; }
     }
 }

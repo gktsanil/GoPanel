@@ -1,4 +1,5 @@
-﻿
+﻿@using Bitirme.Models.ViewModels
+@model CarModel
 @{
     ViewBag.Title = "Filo Düzenle";
 }
@@ -19,12 +20,20 @@
                             <input type="text" class="form-control product" placeholder="Filo Seçiniz" list="fleet">
                             <datalist id="fleet">
                                 <option value="Hepsi" selected disabled>
-                                <option value="Ford">
-                                <option value="Fiat">
-                                <option value="Hyundai">
-                                <option value="Ticari">
-                                <option value="Binek">
-                            </datalist>
+
+                                    @{List<string> myBrands = new List<string>(); }
+
+            @foreach (var brand in Model.Cars)
+                                                {
+
+                                                    if (!myBrands.Contains(brand.CarBrand))
+                                                   {
+                                                                                            myBrands.Add(brand.CarBrand);
+<option value="@brand.CarBrand">@brand.CarBrand</option>
+                                                             }
+                        }
+
+                                </datalist>
                         </div>
                     </div>
                     <div class="col-lg-3">
@@ -55,7 +64,7 @@
                         <tr>
                             <th>ID</th>
                             <th>Filo Adı</th>
-                            <th>Filo Tarihi</th>
+                            <th>Araç Plaka</th>
                             <th>Marka/Model</th>
                             <th>Yıl</th>
                             <th>Son KM</th>
@@ -64,126 +73,19 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class="odd gradeX">
-                            <td>1</td>
-                            <td>Manuş Baba</td>
-                            <td>34 SE 7022</td>
-                            <td class="center">3433</td>
-                            <td>12.04.2018</td>
-                            <td class="center">14.44</td>
-                            <td>16.04.2018</td>
-                            <td class="center">14.44</td>
-                        </tr>
-                        <tr class="even gradeC">
-                            <td>1</td>
-                            <td>Manuş Baba</td>
-                            <td>34 SE 7022</td>
-                            <td class="center">3433</td>
-                            <td>12.04.2018</td>
-                            <td class="center">14.44</td>
-                            <td>16.04.2018</td>
-                            <td class="center">14.44</td>
-                        </tr>
-                        <tr class="odd gradeA">
-                            <td>1</td>
-                            <td>Manuş Baba</td>
-                            <td>34 SE 7022</td>
-                            <td class="center">3433</td>
-                            <td>12.04.2018</td>
-                            <td class="center">14.44</td>
-                            <td>16.04.2018</td>
-                            <td class="center">14.44</td>
-                        </tr>
-                        <tr class="even gradeA">
-                            <td>1</td>
-                            <td>Manuş Baba</td>
-                            <td>34 SE 7022</td>
-                            <td class="center">3433</td>
-                            <td>12.04.2018</td>
-                            <td class="center">14.44</td>
-                            <td>16.04.2018</td>
-                            <td class="center">14.44</td>
-                        </tr>
-                        <tr class="odd gradeA">
-                            <td>1</td>
-                            <td>Manuş Baba</td>
-                            <td>34 SE 7022</td>
-                            <td class="center">3433</td>
-                            <td>12.04.2018</td>
-                            <td class="center">14.44</td>
-                            <td>16.04.2018</td>
-                            <td class="center">14.44</td>
-                        </tr>
-                        <tr class="even gradeA">
-                            <td>1</td>
-                            <td>Manuş Baba</td>
-                            <td>34 SE 7022</td>
-                            <td class="center">3433</td>
-                            <td>12.04.2018</td>
-                            <td class="center">14.44</td>
-                            <td>16.04.2018</td>
-                            <td class="center">14.44</td>
-                        </tr>
-                        <tr class="gradeA">
-                            <td>1</td>
-                            <td>Manuş Baba</td>
-                            <td>34 SE 7022</td>
-                            <td class="center">3433</td>
-                            <td>12.04.2018</td>
-                            <td class="center">14.44</td>
-                            <td>16.04.2018</td>
-                            <td class="center">14.44</td>
-                        </tr>
-                        <tr class="gradeA">
-                            <td>1</td>
-                            <td>Manuş Baba</td>
-                            <td>34 SE 7022</td>
-                            <td class="center">3433</td>
-                            <td>12.04.2018</td>
-                            <td class="center">14.44</td>
-                            <td>16.04.2018</td>
-                            <td class="center">14.44</td>
-                        </tr>
-                        <tr class="gradeA">
-                            <td>1</td>
-                            <td>Manuş Baba</td>
-                            <td>34 SE 7022</td>
-                            <td class="center">3433</td>
-                            <td>12.04.2018</td>
-                            <td class="center">14.44</td>
-                            <td>16.04.2018</td>
-                            <td class="center">14.44</td>
-                        </tr>
-                        <tr class="gradeA">
-                            <td>1</td>
-                            <td>Manuş Baba</td>
-                            <td>34 SE 7022</td>
-                            <td class="center">3433</td>
-                            <td>12.04.2018</td>
-                            <td class="center">14.44</td>
-                            <td>16.04.2018</td>
-                            <td class="center">14.44</td>
-                        </tr>
-                        <tr class="gradeA">
-                            <td>1</td>
-                            <td>Manuş Baba</td>
-                            <td>34 SE 7022</td>
-                            <td class="center">3433</td>
-                            <td>12.04.2018</td>
-                            <td class="center">14.44</td>
-                            <td>16.04.2018</td>
-                            <td class="center">14.44</td>
-                        </tr>
-                        <tr class="gradeA">
-                            <td>1</td>
-                            <td>Manuş Baba</td>
-                            <td>34 SE 7022</td>
-                            <td class="center">3433</td>
-                            <td>12.04.2018</td>
-                            <td class="center">14.44</td>
-                            <td>16.04.2018</td>
-                            <td class="center">14.44</td>
-                        </tr>
+                        @foreach (var car in Model.Cars)
+                        {
+                            <tr class="odd gradeX">
+                                <td>@car.CarID</td>
+                                <td>@car.CarBrand</td>
+                                <td>@car.CarPlateNumber</td>
+                                <td>@car.CarBrand - @car.CarModel</td>
+                                <td>@car.CarYear</td>
+                                <td>@car.CarlastKM</td>
+                                <td>@car.CarDescription</td>
+                                <td><a href="#" class="btn btn-circle btn-warning"> <i class="fa fa-edit"></i> </a></td>
+                            </tr>
+                        }
                     </tbody>
                 </table>
             </div>
@@ -204,7 +106,7 @@
 <script>
     $(document).ready(function () {
         $('#dataTables-example').DataTable({
-            responsive: true
+                                        responsive: true
         });
-    });
+                                });
 </script>

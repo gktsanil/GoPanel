@@ -1,4 +1,5 @@
-﻿
+﻿@using Bitirme.Models.ViewModels
+@model StaffModel
 @{
     ViewBag.Title = "Mesai - Ek Ödeme";
 }
@@ -24,114 +25,23 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class="odd gradeX">
-                            <td>1</td>
-                            <td>Hakan Kakız</td>
-                            <td>Manuş Baba</td>
-                            <td>34 SE 7022</td>
-                            <td class="center">3433</td>
-                            <td>12.04.2018</td>
-                            <td class="center">14.44</td>
-                        </tr>
-                        <tr class="even gradeC">
-                            <td>1</td>
-                            <td>Hakan Kakız</td>
-                            <td>Manuş Baba</td>
-                            <td>34 SE 7022</td>
-                            <td class="center">3433</td>
-                            <td>12.04.2018</td>
-                            <td class="center">14.44</td>
-                        </tr>
-                        <tr class="odd gradeA">
-                            <td>1</td>
-                            <td>Hakan Kakız</td>
-                            <td>Manuş Baba</td>
-                            <td>34 SE 7022</td>
-                            <td class="center">3433</td>
-                            <td>12.04.2018</td>
-                            <td class="center">14.44</td>
-                        </tr>
-                        <tr class="even gradeA">
-                            <td>1</td>
-                            <td>Hakan Kakız</td>
-                            <td>Manuş Baba</td>
-                            <td>34 SE 7022</td>
-                            <td class="center">3433</td>
-                            <td>12.04.2018</td>
-                            <td class="center">14.44</td>
-                        </tr>
-                        <tr class="odd gradeA">
-                            <td>1</td>
-                            <td>Hakan Kakız</td>
-                            <td>Manuş Baba</td>
-                            <td>34 SE 7022</td>
-                            <td class="center">3433</td>
-                            <td>12.04.2018</td>
-                            <td class="center">14.44</td>
-                        </tr>
-                        <tr class="even gradeA">
-                            <td>1</td>
-                            <td>Hakan Kakız</td>
-                            <td>Manuş Baba</td>
-                            <td>34 SE 7022</td>
-                            <td class="center">3433</td>
-                            <td>12.04.2018</td>
-                            <td class="center">14.44</td>
-                        </tr>
-                        <tr class="gradeA">
-                            <td>1</td>
-                            <td>Hakan Kakız</td>
-                            <td>Manuş Baba</td>
-                            <td>34 SE 7022</td>
-                            <td class="center">3433</td>
-                            <td>12.04.2018</td>
-                            <td class="center">14.44</td>
-                        </tr>
-                        <tr class="gradeA">
-                            <td>1</td>
-                            <td>Hakan Kakız</td>
-                            <td>Manuş Baba</td>
-                            <td>34 SE 7022</td>
-                            <td class="center">3433</td>
-                            <td>12.04.2018</td>
-                            <td class="center">14.44</td>
-                        </tr>
-                        <tr class="gradeA">
-                            <td>1</td>
-                            <td>Hakan Kakız</td>
-                            <td>Manuş Baba</td>
-                            <td>34 SE 7022</td>
-                            <td class="center">3433</td>
-                            <td>12.04.2018</td>
-                            <td class="center">14.44</td>
-                        </tr>
-                        <tr class="gradeA">
-                            <td>1</td>
-                            <td>Hakan Kakız</td>
-                            <td>Manuş Baba</td>
-                            <td>34 SE 7022</td>
-                            <td class="center">3433</td>
-                            <td>12.04.2018</td>
-                            <td class="center">14.44</td>
-                        </tr>
-                        <tr class="gradeA">
-                            <td>1</td>
-                            <td>Hakan Kakız</td>
-                            <td>Manuş Baba</td>
-                            <td>34 SE 7022</td>
-                            <td class="center">3433</td>
-                            <td>12.04.2018</td>
-                            <td class="center">14.44</td>
-                        </tr>
-                        <tr class="gradeA">
-                            <td>1</td>
-                            <td>Hakan Kakız</td>
-                            <td>Manuş Baba</td>
-                            <td>34 SE 7022</td>
-                            <td class="center">3433</td>
-                            <td>12.04.2018</td>
-                            <td class="center">14.44</td>
-                        </tr>
+                        @foreach (var payment in Model.Payments)
+    {
+        if (payment.PaidType == 0)
+        {
+
+                    <tr class="odd gradeX">
+                        <td>@payment.PaymentID</td>
+                        <td>@payment.PaidName</td>
+                        <td>@payment.PaidCost</td>
+                        <td>@payment.PaidDate</td>
+                        <td>@payment.SlipPath</td>
+                        <td>@payment.PaymentDescription</td>
+                        <td><a href="#" class="btn btn-circle btn-primary"> <i class="fa fa-bars"></i> </a></td>
+                    </tr>
+
+}
+}
                     </tbody>
                 </table>
             </div>

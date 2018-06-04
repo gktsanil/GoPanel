@@ -132,18 +132,24 @@
     <Compile Include="DBModel\Entity\Customer.cs" />
     <Compile Include="DBModel\Entity\Invoice.cs" />
     <Compile Include="DBModel\Entity\Message.cs" />
+    <Compile Include="DBModel\Entity\Payment.cs" />
     <Compile Include="DBModel\Entity\Reservation.cs" />
     <Compile Include="DBModel\Entity\Service.cs" />
+    <Compile Include="DBModel\Entity\Staff.cs" />
     <Compile Include="DBModel\Entity\User.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ViewModels\BookingModel.cs" />
+    <Compile Include="Models\ViewModels\CarModel.cs" />
+    <Compile Include="Models\ViewModels\CustomerModel.cs" />
     <Compile Include="Models\ViewModels\DashboardModel.cs" />
     <Compile Include="Models\ViewModels\InvoiceModel.cs" />
     <Compile Include="Models\ViewModels\MessageModel.cs" />
     <Compile Include="Models\ViewModels\ServiceModel.cs" />
+    <Compile Include="Models\ViewModels\StaffModel.cs" />
+    <Compile Include="Models\ViewModels\UserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
