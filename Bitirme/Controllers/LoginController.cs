@@ -17,10 +17,10 @@ namespace Bitirme.Controllers
         }
 
         [HttpPost]
-        public ActionResult Login(String username)
+        public ActionResult Login(String username, String password)
         {
 
-                if (username == "anilgoktas")
+                if (username == "anilgoktas" && password == "123456")
                 {
                     Session["username"] = username;
                     Session["login"] = "true";

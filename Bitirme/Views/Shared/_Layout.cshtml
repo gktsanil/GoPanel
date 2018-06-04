@@ -50,7 +50,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="@Url.Action("Index", "Home")">Go~Panel @if (Session["username"] != null) { <b> -  @@@Session["username"]</b> }</a>
+                <a class="navbar-brand" href="@Url.Action("Index", "Home")">Go~Panel @if (Session["username"] != null) { <b> -  @Session["username"]</b> }</a>
             </div>
             <!-- /.navbar-header -->
 
@@ -251,10 +251,10 @@
                     </a>
                     <ul class="dropdown-menu dropdown-user">
                         <li>
-                            <a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                            <a href="#"><i class="fa fa-user fa-fw"></i> @Session["username"]</a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                            <a href="#"><i class="fa fa-gear fa-fw"></i> Ayarlar</a>
                         </li>
                         <li class="divider"></li>
                         <li>
@@ -422,9 +422,9 @@
                                 <li>
                                     <a href="@Url.Action("AdminUser", "User")">Sistem Yöneticileri</a>
                                 </li>
-                                <li>
-                                    <a href="@Url.Action("StaffUser", "User")">Personeller</a>
-                                </li>
+                                <!--<li>
+                <a href="Url.Action("StaffUser", "User")">Personeller</a>
+            </li>-->
                                 <li>
                                     <a href="@Url.Action("AddNewUser", "User")">Kullanıcı Ekle</a>
                                 </li>
@@ -480,32 +480,41 @@
                             <!-- /.nav-second-level -->
                         </li>
                         <li>
-                            <a href="@Url.Action("Maps", "Map")"><i class="fa fa-map fa-fw"></i> Harita</a>
-                        </li>
-                        <li>
-                            <a href="@Url.Action("CalendarPage", "Calendar")"><i class="fa fa-calendar-o fa-fw"></i> Takvim</a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-envelope fa-fw"></i> E-posta<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-map fa-fw"></i> Harita<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="@Url.Action("NewMail", "Email")">Yeni Posta</a>
+                                    <a href="@Url.Action("trafficMap", "Map")"> Trafik Durumu</a>
                                 </li>
                                 <li>
-                                    <a href="@Url.Action("ComingMails", "Email")">Gelen Kutusu</a>
-                                </li>
-                                <li>
-                                    <a href="@Url.Action("OutgoingMails", "Email")">Giden Kutusu</a>
-                                </li>
-                                <li>
-                                    <a href="@Url.Action("Tasks", "Email")">Taslaklar</a>
-                                </li>
-                                <li>
-                                    <a href="@Url.Action("TrashBox", "Email")">Çöp Kutusu</a>
+                                    <a href="@Url.Action("GPSLocations", "Map")"> Araç GPS Konum</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
                         </li>
+                        <li>
+                            <a href="@Url.Action("CalendarPage", "Calendar")"><i class="fa fa-calendar-o fa-fw"></i> Takvim</a>
+                        </li>
+                        <!--<li>
+        <a href="#"><i class="fa fa-envelope fa-fw"></i> E-posta<span class="fa arrow"></span></a>
+        <ul class="nav nav-second-level">
+            <li>
+                <a href="@Url.Action("NewMail", "Email")">Yeni Posta</a>
+            </li>
+            <li>
+                <a href="@Url.Action("ComingMails", "Email")">Gelen Kutusu</a>
+            </li>
+            <li>
+                <a href="@Url.Action("OutgoingMails", "Email")">Giden Kutusu</a>
+            </li>
+            <li>
+                <a href="@Url.Action("Tasks", "Email")">Taslaklar</a>
+            </li>
+            <li>
+                <a href="@Url.Action("TrashBox", "Email")">Çöp Kutusu</a>
+            </li>
+        </ul>
+        <!-- /.nav-second-level
+    </li>-->
                         <li>
                             <a href="#"><i class="fa fa-gears fa-fw"></i> APi İşlemleri<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">

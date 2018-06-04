@@ -136,6 +136,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\ViewModels\DashboardModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -185,7 +186,6 @@
     <Content Include="Views\Staff\Insurance.cshtml" />
     <Content Include="Views\Staff\StaffReports.cshtml" />
     <Content Include="Views\Staff\SalarySlips.cshtml" />
-    <Content Include="Views\Map\Maps.cshtml" />
     <Content Include="Views\Calendar\CalendarPage.cshtml" />
     <Content Include="Views\Email\NewMail.cshtml" />
     <Content Include="Views\Email\ComingMails.cshtml" />
@@ -198,6 +198,8 @@
     <Content Include="Views\Api\SocialMediaApi.cshtml" />
     <Content Include="Views\Api\IbbApi.cshtml" />
     <Content Include="Views\Api\PttApi.cshtml" />
+    <Content Include="Views\Map\GPSLocations.cshtml" />
+    <Content Include="Views\Map\TrafficMap.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -207,7 +209,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
     <Folder Include="Views\Customer\" />
   </ItemGroup>
   <PropertyGroup>

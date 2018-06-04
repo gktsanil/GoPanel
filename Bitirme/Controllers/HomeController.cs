@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Bitirme.DBModel.Context;
+using Bitirme.Models.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -17,7 +19,12 @@ namespace Bitirme.Controllers
             }
             else
             {
-                return View();
+                ProjectContext context = new ProjectContext();
+
+                DashboardModel model = new DashboardModel();
+                model.Cars = context.Cars.ToList();
+
+                return View(model);
             }            
         }
     }

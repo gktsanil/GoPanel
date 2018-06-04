@@ -9,7 +9,19 @@ namespace Bitirme.Controllers
     public class MapController : Controller
     {
         // GET: Map
-        public ActionResult Maps()
+        public ActionResult GPSLocations()
+        {
+            if (Session["login"] == "false" || Session["username"] == null)
+            {
+                return RedirectToAction("Login", "Login");
+            }
+            else
+            {
+                return View();
+            }
+        }
+
+        public ActionResult TrafficMap()
         {
             if (Session["login"] == "false" || Session["username"] == null)
             {
