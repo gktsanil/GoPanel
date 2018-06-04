@@ -20,5 +20,7 @@ namespace Bitirme.DBModel.Entity
         public string CarGear { get; set; }
         public string CarImage { get; set; }
         public string CarFuel { get; set; }
+        public int CarStatus { get; set; }
+        public int CarlastKM { get; set; }
     }
 }

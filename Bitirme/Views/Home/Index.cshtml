@@ -114,38 +114,48 @@
                             <th>Yakıt/Vites</th>
                             <th>Segment</th>
                             <th>Durum</th>
-                            <th>İşlem</th>
+                            <th style="width:120px;">İşlem</th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach (var car in Model.Cars)
-                        {
-                            if (car.CarID % 2 == 0)
-                            {
-                                <tr class="odd gradeX">
-                                    <td>@car.CarID</td>
-                                    <td>@car.CarPlateNumber</td>
-                                    <td>@car.CarBrand - @car.CarModel</td>
-                                    <td class="center">@car.CarYear - 12733</td>
-                                    <td class="center">@car.CarFuel - @car.CarFuel</td>
-                                    <td>@car.CarType</td>
-                                    <td class="center">Müsait</td>
-                                    <td>X</td>
-                                </tr>
+    {
+        if (car.CarID % 2 == 0)
+        {
+                        <tr class="odd gradeX">
+                            <td>@car.CarID</td>
+                            <td>@car.CarPlateNumber</td>
+                            <td>@car.CarBrand - @car.CarModel</td>
+                            <td>@car.CarYear - @car.CarlastKM</td>
+                            <td>@car.CarFuel - @car.CarFuel</td>
+                            <td>@car.CarType</td>
+                            <td>@getCarStatus(car.CarStatus)</td>
+                            <td> <a href="#" class="btn btn-circle btn-primary"> <i class="fa fa-refresh"></i> </a>  <a href="#" class="btn btn-circle btn-warning"> <i class="fa fa-bars"></i> </a>  <a href="#" class="btn btn-circle btn-danger"> <i class="fa fa-times"></i> </a> </td>
+                        </tr>
+}
+else
+{
+                    <tr class="odd gradeX">
+                        <td>@car.CarID</td>
+                        <td>@car.CarPlateNumber</td>
+                        <td>@car.CarBrand - @car.CarModel</td>
+                        <td>@car.CarYear - @car.CarlastKM</td>
+                        <td>@car.CarFuel - @car.CarFuel</td>
+                        <td>@car.CarType</td>
+                        <td>@getCarStatus(car.CarStatus)</td>
+                        <td class="center"> <a href="#" class="btn btn-circle btn-primary"> <i class="fa fa-refresh"></i> </a>  <a href="#" class="btn btn-circle btn-warning"> <i class="fa fa-bars"></i> </a>  <a href="#" class="btn btn-circle btn-danger"> <i class="fa fa-times"></i> </a> </td>
+                    </tr>
                             }
-                            else
-                            {
-                                <tr class="odd gradeX">
-                                    <td>@car.CarID</td>
-                                    <td>@car.CarPlateNumber</td>
-                                    <td>@car.CarBrand - @car.CarModel</td>
-                                    <td class="center">@car.CarYear - 12733</td>
-                                    <td class="center">@car.CarFuel - @car.CarFuel</td>
-                                    <td>@car.CarType</td>
-                                    <td class="center">Müsait</td>
-                                    <td>X</td>
-                                </tr>
+
+                            @functions{
+                                public string getCarStatus(int status)
+                                {
+                                    string[] carStatus = new string[] { "Kirada", "Müsait", "Serviste" };
+
+                                    return carStatus[status];
+                                }
                             }
+
                         }
                     </tbody>
                 </table>
