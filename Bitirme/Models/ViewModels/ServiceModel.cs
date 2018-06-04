@@ -6,9 +6,9 @@ using System.Web;
 
 namespace Bitirme.Models.ViewModels
 {
-    public class DashboardModel
+    public class ServiceModel
     {
         public List<Car> Cars { get; set; }
-        public List<Reservation> Reservations { get; set; }
+        public List<Service> Services { get; set; }
     }
 }

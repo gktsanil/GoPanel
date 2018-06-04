@@ -3,6 +3,8 @@
 
 @{
     ViewBag.Title = "Dashboard";
+    int availableCars = 0;
+    int totalReservation = 0;
 }
 <div class="row">
     <div class="col-lg-3 col-md-6">
@@ -13,7 +15,7 @@
                         <i class="fa fa-car fa-5x"></i>
                     </div>
                     <div class="col-xs-9 text-right">
-                        <div class="huge">26</div>
+                        <div class="huge"> @foreach (var available in Model.Cars) { if (available.CarStatus == 1) { availableCars++; } }  @availableCars </div>
                         <div>Musait Araçlar!</div>
                     </div>
                 </div>
@@ -57,7 +59,7 @@
                         <i class="fa fa-clock-o fa-5x"></i>
                     </div>
                     <div class="col-xs-9 text-right">
-                        <div class="huge">124</div>
+                        <div class="huge"> @foreach (var totalRez in Model.Reservations) { totalReservation++; }  @totalReservation </div>
                         <div>Rezervasyonlar!</div>
                     </div>
                 </div>
@@ -119,19 +121,19 @@
                     </thead>
                     <tbody>
                         @foreach (var car in Model.Cars)
-    {
-        if (car.CarID % 2 == 0)
-        {
-                        <tr class="odd gradeX">
-                            <td>@car.CarID</td>
-                            <td>@car.CarPlateNumber</td>
-                            <td>@car.CarBrand - @car.CarModel</td>
-                            <td>@car.CarYear - @car.CarlastKM</td>
-                            <td>@car.CarFuel - @car.CarFuel</td>
-                            <td>@car.CarType</td>
-                            <td>@getCarStatus(car.CarStatus)</td>
-                            <td> <a href="#" class="btn btn-circle btn-primary"> <i class="fa fa-refresh"></i> </a>  <a href="#" class="btn btn-circle btn-warning"> <i class="fa fa-bars"></i> </a>  <a href="#" class="btn btn-circle btn-danger"> <i class="fa fa-times"></i> </a> </td>
-                        </tr>
+                        {
+                            if (car.CarID % 2 == 0)
+                            {
+                                    <tr class="odd gradeX">
+                                        <td>@car.CarID</td>
+                                        <td>@car.CarPlateNumber</td>
+                                        <td>@car.CarBrand - @car.CarModel</td>
+                                        <td>@car.CarYear - @car.CarlastKM</td>
+                                        <td>@car.CarFuel - @car.CarFuel</td>
+                                        <td>@car.CarType</td>
+                                        <td>@getCarStatus(car.CarStatus)</td>
+                                        <td> <a href="#" class="btn btn-circle btn-primary"> <i class="fa fa-refresh"></i> </a>  <a href="#" class="btn btn-circle btn-warning"> <i class="fa fa-bars"></i> </a>  <a href="#" class="btn btn-circle btn-danger"> <i class="fa fa-times"></i> </a> </td>
+                                    </tr>
 }
 else
 {

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Bitirme.DBModel.Context;
+using Bitirme.Models.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,6 +10,8 @@ namespace Bitirme.Controllers
 {
     public class ServiceController : Controller
     {
+        ProjectContext context = new ProjectContext();
+
         // GET: Service
         public ActionResult OnService()
         {
@@ -17,7 +21,12 @@ namespace Bitirme.Controllers
             }
             else
             {
-                return View();
+
+                ServiceModel model = new ServiceModel();
+                model.Cars = context.Cars.ToList();
+                model.Services = context.Services.ToList();
+
+                return View(model);
             }
         }
 

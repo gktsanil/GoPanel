@@ -17,6 +17,7 @@ namespace Bitirme.DBModel.Entity
         public Decimal TotalCost { get; set; }
         public Decimal TaxRate { get; set; }
         public string InvoiceFile { get; set; }
+        public int InvoiceType { get; set; }
 
         public virtual Customer Customer { get; set; }
     }

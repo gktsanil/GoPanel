@@ -16,5 +16,7 @@ namespace Bitirme.DBModel.Entity
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
         public string ReservationDescription { get; set; }
+        public string SellerName { get; set; }
+        public string CarPlateNumber { get; set; }
     }
 }

@@ -14,5 +14,8 @@ namespace Bitirme.DBModel.Context
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Invoice> Invoices { get; set; }
         public DbSet<Reservation> Reservations { get; set; }
+        public DbSet<Service> Services { get; set; }
+        public DbSet<CarServiceCompany> CarServiceCompanies { get; set; }
+        public DbSet<Message> Messages { get; set; }
     }
 }

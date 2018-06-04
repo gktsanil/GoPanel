@@ -23,6 +23,7 @@ namespace Bitirme.Controllers
 
                 DashboardModel model = new DashboardModel();
                 model.Cars = context.Cars.ToList();
+                model.Reservations = context.Reservations.ToList();
 
                 return View(model);
             }            

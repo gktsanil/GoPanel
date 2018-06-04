@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Bitirme.DBModel.Context;
+using Bitirme.Models.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -6,8 +8,10 @@ using System.Web.Mvc;
 
 namespace Bitirme.Controllers
 {
+
     public class InvoiceController : Controller
     {
+        ProjectContext context = new ProjectContext();
         // GET: Invoice
         public ActionResult ComingInvoice()
         {
@@ -17,7 +21,10 @@ namespace Bitirme.Controllers
             }
             else
             {
-                return View();
+                InvoiceModel model = new InvoiceModel();
+                model.Customers = context.Customers.ToList();
+                model.Invoices = context.Invoices.ToList();
+                return View(model);
             }
         }
 
