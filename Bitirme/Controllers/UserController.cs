@@ -75,8 +75,19 @@ namespace Bitirme.Controllers
             newUser.UserPassword = password;
             newUser.UserNumber = phone;
             //add if any field you want insert
-            context.Users.Add(newUser);
-            context.SaveChanges();
+
+            try
+            {
+                context.Users.Add(newUser);
+                context.SaveChanges();
+            }
+            catch(Exception e)
+            {
+                ViewBag.error = "Kullanıcı Eklenemedi";
+                ViewBag.tagClass = "active";
+                Console.Write(e.Message);
+            }
+
 
             return View();
         }

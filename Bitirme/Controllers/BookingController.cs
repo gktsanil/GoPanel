@@ -72,8 +72,17 @@ namespace Bitirme.Controllers
                     SellerName = sellerName
                 };
 
-                context.Reservations.Add(rez);
-                context.SaveChanges();
+                try
+                {
+                    context.Reservations.Add(rez);
+                    context.SaveChanges();
+                }
+                catch(Exception e)
+                {
+                    ViewBag.error = "Rezervasyon Oluşturulamadı";
+                    ViewBag.tagClass = "active";
+                    Console.Write(e.Message);
+                }
 
                 return View(model);
             }
