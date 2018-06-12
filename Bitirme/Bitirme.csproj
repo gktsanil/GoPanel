@@ -123,12 +123,14 @@
     <Compile Include="Controllers\InvoiceController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\MapController.cs" />
+    <Compile Include="Controllers\NewAdminController.cs" />
     <Compile Include="Controllers\ServiceController.cs" />
     <Compile Include="Controllers\StaffController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="DBModel\Context\ProjectContext.cs" />
     <Compile Include="DBModel\Entity\Car.cs" />
     <Compile Include="DBModel\Entity\CarServiceCompany.cs" />
+    <Compile Include="DBModel\Entity\ConfirmationAdmin.cs" />
     <Compile Include="DBModel\Entity\Customer.cs" />
     <Compile Include="DBModel\Entity\Invoice.cs" />
     <Compile Include="DBModel\Entity\Message.cs" />
@@ -213,6 +215,7 @@
     <Content Include="Views\Api\PttApi.cshtml" />
     <Content Include="Views\Map\GPSLocations.cshtml" />
     <Content Include="Views\Map\TrafficMap.cshtml" />
+    <Content Include="Views\NewAdmin\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

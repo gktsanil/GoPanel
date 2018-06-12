@@ -19,5 +19,6 @@ namespace Bitirme.DBModel.Context
         public DbSet<Message> Messages { get; set; }
         public DbSet<Staff> Staffs { get; set; }
         public DbSet<Payment> Payments { get; set; }
+        public DbSet<ConfirmationAdmin> ConfirmationAdmins { get; set; }
     }
 }

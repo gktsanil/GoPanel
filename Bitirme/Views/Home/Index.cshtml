@@ -184,13 +184,13 @@ else
                         </div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
-                                <h4 class="timeline-title">Lorem ipsum dolor</h4>
+                                <h4 class="timeline-title">Araç Rezervasyon</h4>
                                 <p>
-                                    <small class="text-muted"><i class="fa fa-clock-o"></i> 11 hours ago via Twitter</small>
+                                    <small class="text-muted"><i class="fa fa-clock-o"></i> 11 saat önce Anıl GÖKTAŞ tarafından</small>
                                 </p>
                             </div>
                             <div class="timeline-body">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero laboriosam dolor perspiciatis omnis exercitationem. Beatae, officia pariatur? Est cum veniam excepturi. Maiores praesentium, porro voluptas suscipit facere rem dicta, debitis.</p>
+                                <p>Araç Rezervasyonları kapanmıştır.</p>
                             </div>
                         </div>
                     </li>
@@ -200,11 +200,10 @@ else
                         </div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
-                                <h4 class="timeline-title">Lorem ipsum dolor</h4>
+                                <h4 class="timeline-title">Ödeme İşlemleri</h4>
                             </div>
                             <div class="timeline-body">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem dolorem quibusdam, tenetur commodi provident cumque magni voluptatem libero, quis rerum. Fugiat esse debitis optio, tempore. Animi officiis alias, officia repellendus.</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium maiores odit qui est tempora eos, nostrum provident explicabo dignissimos debitis vel! Adipisci eius voluptates, ad aut recusandae minus eaque facere.</p>
+                                <p>Rezervasyonlar ödemeler peşin alınacaktır</p>
                             </div>
                         </div>
                     </li>
@@ -214,10 +213,10 @@ else
                         </div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
-                                <h4 class="timeline-title">Lorem ipsum dolor</h4>
+                                <h4 class="timeline-title">Güncelleme</h4>
                             </div>
                             <div class="timeline-body">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus numquam facilis enim eaque, tenetur nam id qui vel velit similique nihil iure molestias aliquam, voluptatem totam quaerat, magni commodi quisquam.</p>
+                                <p>12.06.2018 tarihinde sistem güncellemeci nedeni ile 04.00 - 06.00 saatlerinde sistem kapalı olacaktır</p>
                             </div>
                         </div>
                     </li>
@@ -248,17 +247,17 @@ else
                                     </button>
                                     <ul class="dropdown-menu" role="menu">
                                         <li>
-                                            <a href="#">Action</a>
+                                            <a href="#">Kabul Et</a>
                                         </li>
                                         <li>
-                                            <a href="#">Another action</a>
+                                            <a href="#">İptal Et</a>
                                         </li>
                                         <li>
-                                            <a href="#">Something else here</a>
+                                            <a href="#">İtiraz Et</a>
                                         </li>
                                         <li class="divider"></li>
                                         <li>
-                                            <a href="#">Separated link</a>
+                                            <a href="#">Mesaj Gönder</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -291,6 +290,39 @@ else
                 </ul>
             </div>
             <!-- /.panel-body -->
+            <div class="panel-footer">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <input id="btn-input" type="text" class="form-control" placeholder="Başlık Giriniz..." />
+                    </div>
+                    <div class="col-lg-6">
+                        <select class="form-control">
+                            <option selected disabled>Seçiniz</option>
+                            <option value="0">Acil</option>
+                            <option value="1">Önemli</option>
+                            <option value="2">Normal</option>
+                        </select>
+                    </div>
+                </div>
+                <br />
+                <div class="input-group dropup">
+                    <input id="btn-input" type="text" class="form-control" placeholder="Duyuru Giriniz..." />
+                    <span class="input-group-btn">
+                        <button class="btn btn-warning dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Gönder
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                            <li><a href="#">Yazılım</a></li>
+                            <li><a href="#">Satın Alma</a></li>
+                            <li><a href="#">Bütün Birimler</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Diğer Birimler</a></li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
+            <!-- /.panel-footer -->
         </div>
         <!-- /.panel -->
     </div>
