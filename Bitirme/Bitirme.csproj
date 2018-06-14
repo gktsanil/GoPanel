@@ -216,6 +216,7 @@
     <Content Include="Views\Map\GPSLocations.cshtml" />
     <Content Include="Views\Map\TrafficMap.cshtml" />
     <Content Include="Views\NewAdmin\Index.cshtml" />
+    <Content Include="Views\Booking\EditReservation.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -100,5 +100,62 @@ namespace Bitirme.Controllers
                 return View();
             }
         }
+
+        public ActionResult EditReservation()
+        {
+            if (Session["login"] == "false" || Session["username"] == null)
+            {
+                return RedirectToAction("Login", "Login");
+            }
+            else
+            {
+                int id = int.Parse(this.RouteData.Values["id"].ToString());
+
+                Reservation rez = null;
+
+                if (id != null)
+                {
+                    rez = context.Reservations.Where(x => x.ReservationID == id).FirstOrDefault();
+                    
+                }
+
+                return View(rez);
+            }
+        }
+        [HttpPost]
+        public ActionResult EditReservation(Reservation rez)
+        {
+            if (Session["login"] == "false" || Session["username"] == null)
+            {
+                return RedirectToAction("Login", "Login");
+            }
+            else
+            {
+                Reservation res = context.Reservations.Where(x => x.ReservationID == rez.ReservationID).FirstOrDefault();
+
+                if (res != null)
+                {
+                    res.CustomerName = rez.CustomerName;
+                    res.CarPlateNumber = rez.CarPlateNumber;
+                    res.SellerName = rez.SellerName;
+                    res.ReservationDescription = rez.ReservationDescription;
+
+                    int sonuc = context.SaveChanges();
+
+                    if (sonuc > 0)
+                    {
+                        ViewBag.Result = "Değişiklikler Kaydedilmiştir.";
+                        ViewBag.Status = "success";
+                    }
+                    else
+                    {
+                        ViewBag.Result = "Değişiklikler Kaydedilmedi.";
+                        ViewBag.Status = "danger";
+                    }
+                }
+
+                return RedirectToAction("BookingEdit", "Booking");
+            }
+        }
     }
 }

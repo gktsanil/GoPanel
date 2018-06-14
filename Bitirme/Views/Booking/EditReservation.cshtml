@@ -1,0 +1,193 @@
+﻿@using Bitirme.DBModel.Entity
+@model Reservation
+@{
+    ViewBag.Title = "Res";
+}
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <!--<div class="panel-heading">
+                Yeni Rezervasyon Ekle
+            </div>-->
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <form role="form" method="post" action="@Url.Action("EditReservation", "Booking")">
+                            <div class="form-group">
+                                <label>Müşteri Adı</label>
+                                <div class="form-group input-group">
+                                    <input type="text" name="customerName" value="@Model.CustomerName" class="form-control">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default" type="button">
+                                            <i class="fa fa-bars"></i>
+                                        </button>
+                                    </span>
+                                </div>
+                                <!--<p class="help-block">Example block-level help text here.</p>-->
+                            </div>
+                            <div class="form-group">
+                                <label>Araç Seç</label>
+                                <div class="form-group input-group">
+                                    <input type="text" name="carPlate" value="@Model.CarPlateNumber" class="form-control">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default" type="button">
+                                            <i class="fa fa-search"></i>
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Satıcı Adı</label>
+                                <div class="form-group input-group">
+                                    <input type="text" value="@Model.SellerName" name="sellerName" class="form-control">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default" type="button">
+                                            <i class="fa fa-search"></i>
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-lg-6">
+                                    <label>Alış Tarihi:</label>
+                                    <input name="startDate" value="@Model.StartDate" class="form-control" type="datetime-local" />
+                                </div>
+                                <div class="form-group col-lg-6">
+                                    <label>Teslim Tarihi:</label>
+                                    <input name="endDate" value="@Model.EndDate" class="form-control" type="datetime-local" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group input-group">
+                                        <span class="input-group-addon">₺</span>
+                                        <input type="text" class="form-control">
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-default" type="button">
+                                                <i class="fa fa-exchange"></i>
+                                            </button>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group input-group">
+                                        <span class="input-group-addon">€</span>
+                                        <input type="text" class="form-control">
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-default" type="button">
+                                                <i class="fa fa-exchange"></i>
+                                            </button>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group input-group">
+                                        <span class="input-group-addon">$</span>
+                                        <input type="text" class="form-control">
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-default" type="button">
+                                                <i class="fa fa-exchange"></i>
+                                            </button>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label>Sürücü Ehliyet</label>
+                                        <input type="file">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label>Sürücü Kimlik</label>
+                                        <input type="file">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Açıklama</label>
+                                <textarea name="description" class="form-control" rows="3">@Model.ReservationDescription</textarea>
+                            </div>
+                            <div class="form-group">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" value="">Kasko
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" value="">GPS
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" value="">Bebek Koltuğu
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" value="">Ek Sürücü
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12 center">
+                                    <button type="submit" class="btn btn-success">Değişiklikleri Kaydet</button>
+                                    <button type="reset" class="btn btn-danger">İptal Et</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- /.col-lg-6 (nested) -->
+                    <div class="col-lg-6">
+                        <h1>Fiat Egea - Oto/Dizel - Orta Dizel Sedan</h1>
+                        <form role="form">
+                            <fieldset disabled>
+                                <div class="form-group">
+                                    <label for="disabledSelect">Araç Plaka</label>
+                                    <input class="form-control" id="disabledInput" type="text" placeholder="@Model.CarPlateNumber" disabled>
+                                </div>
+                            </fieldset>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <img style="width:100%; height:60%;" src="https://i.ytimg.com/vi/vDDF7TrURKA/maxresdefault.jpg" class="form-control" />
+                                </div>
+                            </div><br />
+                            <div class="form-group">
+                                <label>Ekstralar</label>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" value="" disabled>Kasko
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" value="" disabled>GPS
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" value="" disabled>Bebek Koltuğu
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" value="" disabled>Ek Sürücü
+                                    </label>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- /.col-lg-6 (nested) -->
+                </div>
+                <!-- /.row (nested) -->
+            </div>
+            <!-- /.panel-body -->
+        </div>
+        <!-- /.panel -->
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<!-- /.row -->
